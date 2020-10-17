@@ -1,8 +1,4 @@
-
-// Global Function 
-let get_sound = function() {
-  return "bark!";
-};
+// Objects Examples
 
 /** Object and Methods Examples*/
 let dog1 = {
@@ -26,10 +22,17 @@ let dog2 = {
     return "whine";
   },
   sex: "Female"
-
 };
 
+// Global Function
+let get_sound = function() {
+  return "bark!";
+};
+// get dog name to modify dom
 function getDogName(_dog) {
-  document.getElementById(_dog.name).textContent;
+  document.getElementById("dog-name").textContent = _dog.name;
+  /** if dog name is ace   , then color any text with his name in Green **/
+  _dog.name == "Ace"
+    ? (document.getElementById("dog-name").style.font = "green")
+    : (document.getElementById("dog-name").style.font = "blue");
 }
-
